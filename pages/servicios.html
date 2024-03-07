@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página del Equipo</title>
+    <!-- Enlaza los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Enlaza FontAwesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .footer-icons i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #1A4D2E;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/img/logo-ea.png" class="d-inline-block align-top" alt="Logo del Estudio">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style="color: white;">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html" style="color: white;">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./equipo.html" style="color: white;">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./servicios.html" style="color: white;">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html" style="color: white;">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Nuestros Servicios</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div id="carouselServices" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselServices" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselServices" data-slide-to="1"></li>
+                            <li data-target="#carouselServices" data-slide-to="2"></li>
+                            <li data-target="#carouselServices" data-slide-to="3"></li>
+                            <li data-target="#carouselServices" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="/img/asesoramiento-empresas.jpg" alt="Foto Empresas">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Asesoramiento de Empresas</h5>
+                                    <p class="d-none d-md-block">Ofrecemos asesoramiento legal integral para empresas en diversas áreas.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/img/derecho-laboral.jpg" alt="Derecho Laboral">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Derecho Laboral</h5>
+                                    <p class="d-none d-md-block">Brindamos asesoramiento en relaciones laborales, contratación, despidos, accidentes de trabajo, conflictos colectivos, entre otros aspectos del derecho del trabajo.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/img/derecho-civil.jpg" alt="Derecho Civil">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Derecho Civil</h5>
+                                    <p class="d-none d-md-block">Asesoramos a nuestros clientes en asuntos relacionados con el derecho civil, como contratos, propiedad, sucesiones, y más.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/img/derecho-comercial.jpg" alt="Derecho Comercial">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Derecho Comercial</h5>
+                                    <p class="d-none d-md-block">Ofrecemos servicios legales en todas las áreas del derecho comercial, incluyendo derecho societario, contratos comerciales, y más.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/img/derecho-tributario.jpg" alt="Derecho Tributario">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Derecho Tributario</h5>
+                                    <p class="d-none d-md-block">Ofrecemos asesoramiento en planificación fiscal, litigios tributarios, entre otros aspectos del derecho tributario.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselServices" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselServices" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>      
+
+    <footer style= "background-color: FF9F29">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-left footer-icons">
+                    <a href="#"><i class="fab fa-instagram btn btn-primary"></i></a>
+                    <a href="#"><i class="fab fa-facebook btn btn-primary"></i></a>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <i class="fas fa-map-marker-alt"></i> Libertad 293, 2do piso, CABA, Argentina
+                    <br>
+                    <i class="fas fa-phone"></i> 1162453936
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

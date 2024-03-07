@@ -1,0 +1,171 @@
+header {
+    background-color: #FF9F29; /* Color de fondo del header */
+    position: fixed; /* Hacer que el header sea sticky */
+    top: 0; /* Fijar el header en la parte superior */
+    width: 100%; /* Asegurar que el header ocupe todo el ancho */
+    z-index: 1000; /* Asegurar que el header esté por encima de otros elementos */
+}
+
+header img {
+    height: 100px;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 10px 20px; /* Margen alrededor del logo */
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+}
+
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: 160px;
+    line-height: 1.6;
+    color: #343a40;
+    background-color: #FAF3E3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #1A4D2E;
+}
+
+h5 {
+    color: white;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #FF9F29;
+}
+
+a:hover {
+    color: #FF9F29;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+}
+
+.card-img-top {
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+}
+
+.card-title {
+    color: #1A4D2E; /* Color del título de la tarjeta */
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d; /* Color del texto de la tarjeta */
+}
+
+/*ESTILOS PARA LA PAGINA DE INICIO*/
+.jumbotron {
+    background-image: url('/img/fondo-atardecer.jpg');
+    background-size: 100% 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #1A4D2E;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.jumbotron h1 {
+    font-size: 3em;
+}
+
+.jumbotron p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Estilos para los servicios */
+.service {
+    text-align: center;
+    padding: 20px;
+}
+
+.service img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 1.5em;
+}
+
+.service p {
+    font-size: 1.1em;
+}
+
+/* Estilos para las imágenes de los servicios */
+.service img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/*ESTILOS PARA LA PAGINA NOSOTROS*/
+
+/*ESTILOS PARA PAGINA DE SERVICIOS*/
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi transparente */
+    padding: 20px;
+    color: #fff; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    margin: 0;
+}
+
+/*ESTILOS PARA LA PAGINA DE CONTACTO*/
+
+/* Estilos para los botones */
+.btn-primary {
+    background-color: #1A4D2E;
+    border-color: #1A4D2E;
+}
+
+.btn-primary:hover {
+    background-color: #1A4D2E;
+    border-color: #1A4D2E;
+}
+
+/* Estilos para el formulario de contacto */
+.form-control {
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #FF9F29;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-icons i {
+    color: #fff;
+    margin-right: 10px;
+}
