@@ -1,0 +1,238 @@
+$primary-color: #FF9F29;
+$secondary-color: #1A4D2E;
+
+$accent-color: #FF9F29;
+$navbar-text-color: white;
+$navbar-text-hover-color: lighten($navbar-text-color, 10%);
+$header-background-color: $primary-color;
+$footer-background-color: $primary-color;
+$link-color: $primary-color;
+$navbar-link-padding: 0.5rem 1rem;
+$card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+$margin-top-header: 160px;
+
+$font-family-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-heading: 'Roboto', sans-serif;
+
+// Estilos para el header
+header {
+    background-color: $header-background-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    img {
+        height: 100px;
+        border: 3px solid;
+        border-radius: 50%;
+        margin: 10px 20px;
+    }
+}
+
+
+.navbar-nav {
+    .nav-item {
+        margin-right: 15px;
+
+        .nav-link {
+            color: $navbar-text-color;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 20px; // Añade bordes redondeados
+            transition: all 0.3s ease; // Añade una transición suave al cambio de color al pasar el ratón
+
+            &:hover {
+                color: $navbar-text-hover-color;
+                background-color: $accent-color; // Cambia el color de fondo al pasar el ratón
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    border-color: $navbar-text-color;
+
+    .navbar-toggler-icon {
+        background-color: $navbar-text-color; // Cambia el color del icono del botón de alternancia de navegación
+    }
+}
+
+// Estilos generales del body
+body {
+    font-family: $font-family-body;
+    margin-top: $margin-top-header;
+    line-height: 1.6;
+    color: #343a40;
+    background-color: #FAF3E3;
+}
+
+// Estilos para los títulos
+h1, h2, h3, h4, h6 {
+    font-family: $font-family-heading;
+    font-weight: bold;
+    color: $secondary-color;
+
+    h5 {
+        font-family: $font-family-heading;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+// Estilos para los enlaces
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-color;
+    }
+}
+
+// Estilos para las tarjetas
+.card {
+    border: none;
+    box-shadow: $card-box-shadow;
+
+    &-img-top {
+        border-radius: 10px;
+    }
+
+    &-title {
+        color: $secondary-color;
+        font-weight: bold;
+    }
+
+    &-text {
+        color: #6c757d;
+    }
+}
+
+.jumbotron {
+    background-image: url('/img/fondo-atardecer.jpg');
+    background-size: cover; // Ajusta la imagen para cubrir todo el contenedor
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative; // Añade posición relativa para poder utilizar posición absoluta en los elementos internos
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); // Añade un fondo semi-transparente para mejorar el contraste con el texto
+    }
+
+    .container {
+        position: relative; // Añade posición relativa para poder utilizar posición absoluta en los elementos internos
+
+        h1 {
+            font-size: 4em; // Aumenta el tamaño del título para que sea más impactante
+            margin-bottom: 30px; // Incrementa el espacio entre el título y el párrafo
+            font-weight: bold;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8); // Aumenta el tamaño y la opacidad de la sombra del texto
+            color: #F7F6BB;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 1.8em; // Aumenta el tamaño del texto para mayor impacto
+            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); // Aumenta el tamaño y la opacidad de la sombra del texto
+        }
+    }
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+    text-decoration: underline;
+    text-decoration-color: #FF9F29;
+}
+// Estilos para los servicios
+.service {
+    text-align: center;
+    padding: 20px;
+
+    img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+// Estilos para las imágenes de los servicios
+.service img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 20%;
+    margin-bottom: 20px;
+}
+
+// Estilos para el carrusel
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+
+    h5,
+    p {
+        margin: 0;
+    }
+}
+
+// Estilos para los botones
+.btn-primary {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+
+    &:hover {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+    }
+}
+
+// Estilos para el formulario de contacto
+.form-control {
+    border: 1px solid #ced4da;
+
+    &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+}
+
+// Estilos para el footer
+footer {
+    background-color: $footer-background-color;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+
+    .footer-icons i {
+        color: #fff;
+        margin-right: 10px;
+    }
+}

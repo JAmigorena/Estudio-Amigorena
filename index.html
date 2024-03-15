@@ -1,104 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio Jurídico Amigorena</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .jumbotron {
-            background-image: url('/img/fondo-atardecer.jpg');
-            /*background-size: cover;*/
-            color: #FF9F29;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .jumbotron h1 {
-            font-size: 3em;
-        }
-
-        .jumbotron p {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-
-        .service {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .service img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .service h3 {
-            font-size: 1.5em;
-        }
-
-        .service p {
-            font-size: 1.1em;
-        }
-    </style>
+    <title>Página de Inicio</title>
+    <!-- Enlaza los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Enlaza FontAwesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página de Inicio</title>
-        <!-- Enlaza los archivos CSS de Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <!-- Enlaza FontAwesome para los íconos -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <style>
-            .footer-icons i {
-                margin-right: 10px;
-            }
-        </style>
-    </head>
+
     <body>
         <header style="background-color: #1A4D2E;">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/logo-ea.png" class="d-inline-block align-top" alt="Logo del Estudio">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" style="color: white;">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/nosotros.html" style="color: white;">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/equipo.html" style="color: white;">Equipo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/servicios.html" style="color: white;">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html" style="color: white;">Contacto</a>
-                        </li>
-                    </ul>
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/img/logo-ea.png" class="d-inline-block align-top" alt="Logo del Estudio">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html" style="color: white;">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/nosotros.html" style="color: white;">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/equipo.html" style="color: white;">Equipo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/servicios.html" style="color: white;">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contacto.html" style="color: white;">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
-
+        
         <main>
             <div class="jumbotron">
                 <div class="container">
@@ -106,8 +51,8 @@
                     <p>Abogados comprometidos con la defensa de tus derechos.</p>
                 </div>
             </div>
-
             <div class="container">
+                <h2>NUESTRAS ESPECIALIDADES</h2>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="service">
@@ -158,6 +103,12 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
 </html>

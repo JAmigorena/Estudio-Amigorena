@@ -1,171 +1,218 @@
 header {
-    background-color: #FF9F29; /* Color de fondo del header */
-    position: fixed; /* Hacer que el header sea sticky */
-    top: 0; /* Fijar el header en la parte superior */
-    width: 100%; /* Asegurar que el header ocupe todo el ancho */
-    z-index: 1000; /* Asegurar que el header esté por encima de otros elementos */
+  background-color: #FF9F29;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
-
 header img {
-    height: 100px;
-    border: 3px solid;
-    border-radius: 50%;
-    margin: 10px 20px; /* Margen alrededor del logo */
+  height: 100px;
+  border: 3px solid;
+  border-radius: 50%;
+  margin: 10px 20px;
 }
 
-.navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
-    font-size: 18px;
+.navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos uniformemente */
+  align-items: center; /* Alinea verticalmente en el centro */
+}
+.navbar-nav .nav-item {
+  margin-right: 0; /* Elimina el margen derecho individual */
 }
 
+.navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: white;
+  background-color: #FF9F29;
+}
+
+.navbar-toggler {
+  border-color: #1A4D2E;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-color: gray;
+  border-radius: 5px;
+}
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin-top: 160px;
-    line-height: 1.6;
-    color: #343a40;
-    background-color: #FAF3E3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 160px;
+  line-height: 1.6;
+  color: #343a40;
+  background-color: #FAF3E3;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: #1A4D2E;
+h1, h2, h3, h4, h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #1A4D2E;
+}
+h1 h5, h2 h5, h3 h5, h4 h5, h6 h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: white;
 }
 
-h5 {
-    color: white;
-}
-
-/* Estilos para los enlaces */
 a {
-    color: #FF9F29;
+  color: #FF9F29;
 }
 
 a:hover {
-    color: #FF9F29;
+  color: #FF9F29;
 }
 
 .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
-    border-radius: 10px; /* Bordes redondeados para las imágenes */
+  border-radius: 10px;
 }
 
 .card-title {
-    color: #1A4D2E; /* Color del título de la tarjeta */
-    font-weight: bold;
+  color: #1A4D2E;
+  font-weight: bold;
 }
 
 .card-text {
-    color: #6c757d; /* Color del texto de la tarjeta */
+  color: #6c757d;
 }
 
-/*ESTILOS PARA LA PAGINA DE INICIO*/
 .jumbotron {
-    background-image: url('/img/fondo-atardecer.jpg');
-    background-size: 100% 500px;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #1A4D2E;
-    text-align: center;
-    padding: 100px 0;
+  background-image: url("/img/fondo-atardecer.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
 }
 
-.jumbotron h1 {
-    font-size: 3em;
+.jumbotron:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.jumbotron p {
-    font-size: 1.2em;
-    margin-top: 20px;
+.jumbotron .container {
+  position: relative;
 }
 
-/* Estilos para los servicios */
+.jumbotron .container h1 {
+  font-size: 4em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  color: #F7F6BB;
+  text-decoration: underline;
+}
+
+.jumbotron .container p {
+  font-size: 1.8em;
+  opacity: 0.9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline;
+  text-decoration-color: #FF9F29;
+}
+
 .service {
-    text-align: center;
-    padding: 20px;
+  flex: 0 0 calc(33.33% - 20px); /* Establece el ancho deseado para cada elemento */
+  margin: 10px; /* Agrega un margen entre los elementos */
+  display: flex; /* Utiliza flexbox para alinear verticalmente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+  justify-content: center; /* Alinea los elementos en el centro horizontal */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Alinea los elementos en el centro horizontal */
+  text-align: center; /* Alinea el texto en el centro */
 }
+
 
 .service img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .service h3 {
-    font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 .service p {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
-/* Estilos para las imágenes de los servicios */
 .service img {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  max-height: 200px;
+  border-radius: 20%;
+  margin-bottom: 20px;
 }
 
-/*ESTILOS PARA LA PAGINA NOSOTROS*/
+.carousel-item img {
+  height: auto;
+  max-width: 100%;
+}
 
-/*ESTILOS PARA PAGINA DE SERVICIOS*/
 .carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi transparente */
-    padding: 20px;
-    color: #fff; /* Color del texto */
-    border-radius: 10px; /* Bordes redondeados */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
 }
 
-.carousel-caption h5,
-.carousel-caption p {
-    margin: 0;
-}
 
-/*ESTILOS PARA LA PAGINA DE CONTACTO*/
-
-/* Estilos para los botones */
 .btn-primary {
-    background-color: #1A4D2E;
-    border-color: #1A4D2E;
+  background-color: #1A4D2E;
+  border-color: #1A4D2E;
 }
-
 .btn-primary:hover {
-    background-color: #1A4D2E;
-    border-color: #1A4D2E;
+  background-color: #1A4D2E;
+  border-color: #1A4D2E;
 }
 
-/* Estilos para el formulario de contacto */
 .form-control {
-    border: 1px solid #ced4da;
+  border: 1px solid #ced4da;
 }
-
 .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/* Estilos para el footer */
 footer {
-    background-color: #FF9F29;
-    color: #fff;
-    padding: 20px 0;
-    margin-top: 20px;
+  background-color: #FF9F29;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+footer .footer-icons i {
+  color: #fff;
+  margin-right: 10px;
 }
 
-.footer-icons i {
-    color: #fff;
-    margin-right: 10px;
-}
+/*# sourceMappingURL=styles.css.map */
