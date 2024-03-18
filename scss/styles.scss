@@ -1,23 +1,10 @@
-$primary-color: #FF9F29;
-$secondary-color: #1A4D2E;
+$header-bg-color: #FF9F29;
+$primary-color: #1A4D2E;
+$link-color: #FF9F29;
+$jumbotron-bg: url("/img/fondo-atardecer.jpg");
 
-$accent-color: #FF9F29;
-$navbar-text-color: white;
-$navbar-text-hover-color: lighten($navbar-text-color, 10%);
-$header-background-color: $primary-color;
-$footer-background-color: $primary-color;
-$link-color: $primary-color;
-$navbar-link-padding: 0.5rem 1rem;
-$card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-$margin-top-header: 160px;
-
-$font-family-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-heading: 'Roboto', sans-serif;
-
-// Estilos para el header
 header {
-    background-color: $header-background-color;
+    background-color: $header-bg-color;
     position: fixed;
     top: 0;
     width: 100%;
@@ -31,120 +18,119 @@ header {
     }
 }
 
-
 .navbar-nav {
-    .nav-item {
-        margin-right: 15px;
+    display: flex;
+    justify-content: space-between; // Alinea los elementos uniformemente
+    align-items: center; // Alinea verticalmente en el centro
 
-        .nav-link {
-            color: $navbar-text-color;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 20px;
-            border-radius: 20px; // Añade bordes redondeados
-            transition: all 0.3s ease; // Añade una transición suave al cambio de color al pasar el ratón
+.nav-item {
+    margin-right: 0; // Elimina el margen derecho individual
+    
+    .nav-link {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
 
-            &:hover {
-                color: $navbar-text-hover-color;
-                background-color: $accent-color; // Cambia el color de fondo al pasar el ratón
+    &:hover {
+        background-color: $header-bg-color;
             }
         }
     }
 }
 
 .navbar-toggler {
-    border-color: $navbar-text-color;
-
-    .navbar-toggler-icon {
-        background-color: $navbar-text-color; // Cambia el color del icono del botón de alternancia de navegación
+    border-color: $primary-color;
+    
+    & .navbar-toggler-icon {
+        background-color: gray;
+        border-radius: 5px;
     }
 }
 
-// Estilos generales del body
 body {
-    font-family: $font-family-body;
-    margin-top: $margin-top-header;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 160px;
     line-height: 1.6;
     color: #343a40;
     background-color: #FAF3E3;
 }
 
-// Estilos para los títulos
 h1, h2, h3, h4, h6 {
-    font-family: $font-family-heading;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
-    color: $secondary-color;
-
+    color: $primary-color;
+    
     h5 {
-        font-family: $font-family-heading;
+        font-family: "Roboto", sans-serif;
         font-weight: bold;
         color: white;
     }
 }
 
-// Estilos para los enlaces
 a {
     color: $link-color;
-
+    
     &:hover {
         color: $link-color;
     }
 }
 
-// Estilos para las tarjetas
 .card {
     border: none;
-    box-shadow: $card-box-shadow;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
     &-img-top {
         border-radius: 10px;
     }
-
+    
     &-title {
-        color: $secondary-color;
+        color: $primary-color;
         font-weight: bold;
     }
-
+    
     &-text {
         color: #6c757d;
     }
 }
 
 .jumbotron {
-    background-image: url('/img/fondo-atardecer.jpg');
-    background-size: cover; // Ajusta la imagen para cubrir todo el contenedor
+    background-image: $jumbotron-bg;
+    background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
     padding: 100px 0;
-    position: relative; // Añade posición relativa para poder utilizar posición absoluta en los elementos internos
+    position: relative;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3); // Añade un fondo semi-transparente para mejorar el contraste con el texto
+        background: rgba(0, 0, 0, 0.3);
     }
 
-    .container {
-        position: relative; // Añade posición relativa para poder utilizar posición absoluta en los elementos internos
-
-        h1 {
-            font-size: 4em; // Aumenta el tamaño del título para que sea más impactante
-            margin-bottom: 30px; // Incrementa el espacio entre el título y el párrafo
-            font-weight: bold;
-            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8); // Aumenta el tamaño y la opacidad de la sombra del texto
-            color: #F7F6BB;
-            text-decoration: underline;
-        }
-
-        p {
-            font-size: 1.8em; // Aumenta el tamaño del texto para mayor impacto
-            opacity: 0.9;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); // Aumenta el tamaño y la opacidad de la sombra del texto
+    & .container {
+        position: relative;
+    
+    h1 {
+        font-size: 4em;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+        color: #F7F6BB;
+        text-decoration: underline;
+    }
+    
+    p {
+        font-size: 1.8em;
+        opacity: 0.9;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
     }
 }
@@ -153,12 +139,18 @@ h2 {
     text-align: center;
     padding: 20px;
     text-decoration: underline;
-    text-decoration-color: #FF9F29;
+    text-decoration-color: $link-color;
 }
-// Estilos para los servicios
+
 .service {
-    text-align: center;
-    padding: 20px;
+  flex: 0 0 calc(33.33% - 20px); // Establece el ancho deseado para cada elemento
+  margin: 10px; // Agrega un margen entre los elementos
+  display: flex; // Utiliza flexbox para alinear verticalmente
+  flex-wrap: wrap; // Permite que los elementos se envuelvan en filas
+  justify-content: center; // Alinea los elementos en el centro horizontal
+  flex-direction: column; // Apila los elementos verticalmente
+  align-items: center; // Alinea los elementos en el centro horizontal
+  text-align: center; // Alinea el texto en el centro
 
     img {
         width: 100%;
@@ -166,28 +158,22 @@ h2 {
         border-radius: 50%;
         margin-bottom: 20px;
     }
-
+    
     h3 {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
-
+    
     p {
         font-size: 1.1em;
     }
-}
+    }
 
-// Estilos para las imágenes de los servicios
-.service img {
-    width: 100%;
+    .carousel-item img {
     height: auto;
-    max-width: 250px;
-    max-height: 200px;
-    border-radius: 20%;
-    margin-bottom: 20px;
-}
+    max-width: 100%;
+    }
 
-// Estilos para el carrusel
-.carousel-caption {
+    .carousel-caption {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -196,43 +182,35 @@ h2 {
     padding: 20px;
     color: #fff;
     border-radius: 10px;
-
-    h5,
-    p {
-        margin: 0;
     }
-}
 
-// Estilos para los botones
-.btn-primary {
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-
+    .btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    
     &:hover {
-        background-color: $secondary-color;
-        border-color: $secondary-color;
+        background-color: $primary-color;
+        border-color: $primary-color;
     }
-}
+    }
 
-// Estilos para el formulario de contacto
-.form-control {
+    .form-control {
     border: 1px solid #ced4da;
-
+    
     &:focus {
         border-color: #007bff;
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
-}
+    }
 
-// Estilos para el footer
-footer {
-    background-color: $footer-background-color;
-    color: #fff;
+    footer {
+    background-color: $header-bg-color;
+    color: white;
     padding: 20px 0;
     margin-top: 20px;
-
-    .footer-icons i {
-        color: #fff;
+    
+    & .footer-icons i {
+        color: white;
         margin-right: 10px;
     }
-}
+    }
