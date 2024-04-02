@@ -1,0 +1,18 @@
+/*Main Equipo*/
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &-img-top {
+        border-radius: 10px;
+    }
+
+    &-title {
+        color: #1A4D2E;
+        font-weight: bold;
+    }
+
+    &-text {
+        color: #6c757d;
+    }
+}

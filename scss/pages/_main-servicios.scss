@@ -1,0 +1,18 @@
+/*Main Servicios*/
+.carousel-item {
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+}

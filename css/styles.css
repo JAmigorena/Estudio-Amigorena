@@ -1,49 +1,60 @@
-header {
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* html {
+  font-family: "Roboto", sans-serif;
+} */
+
+/* header {
   background-color: #FF9F29;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-}
-header img {
+  z-index: 1000; 
+ } */
+
+/* header img {
   height: 100px;
   border: 3px solid;
   border-radius: 50%;
   margin: 10px 20px;
-}
-
+} */
+/* 
 .navbar-nav {
   display: flex;
-  justify-content: space-between; /* Alinea los elementos uniformemente */
-  align-items: center; /* Alinea verticalmente en el centro */
-}
-.navbar-nav .nav-item {
-  margin-right: 0; /* Elimina el margen derecho individual */
-}
+  justify-content: space-between; 
+  align-items: center;
+} */
+/* .navbar-nav .nav-item {
+  margin-right: 0;
+} */
 
-.navbar-nav .nav-item .nav-link {
+/* .navbar-nav .nav-item .nav-link {
   color: white;
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
-}
+} */
 
-.navbar-nav .nav-item .nav-link:hover {
+/* .navbar-nav .nav-item .nav-link:hover {
   color: white;
   background-color: #FF9F29;
-}
+} */
 
-.navbar-toggler {
+/* .navbar-toggler {
   border-color: #1A4D2E;
-}
-.navbar-toggler .navbar-toggler-icon {
+} */
+/* .navbar-toggler .navbar-toggler-icon {
   background-color: gray;
   border-radius: 5px;
-}
+} */
 
-body {
+/*body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 160px;
   line-height: 1.6;
@@ -60,24 +71,105 @@ h1 h5, h2 h5, h3 h5, h4 h5, h6 h5 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: white;
-}
+}*/
 
-a {
+/* a {
   color: #FF9F29;
 }
 
 a:hover {
   color: #FF9F29;
-}
+} */
 
-.card {
+/* .jumbotron {
+  background-image: url("/img/fondo-atardecer.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+} */
+
+/* .jumbotron:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+} */
+
+/* .jumbotron .container {
+  position: relative;
+} */
+
+/* .jumbotron .container h1 {
+  font-size: 4em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  color: #F7F6BB;
+  text-decoration: underline;
+} */
+
+/* .jumbotron .container p {
+  font-size: 1.8em;
+  opacity: 0.9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+} */
+
+/* h2 {
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline;
+  text-decoration-color: #FF9F29;
+} */
+
+/* .service {
+  flex: 0 0 calc(33.33% - 20px); Establece el ancho deseado para cada elemento */
+  /* margin: 10px; Agrega un margen entre los elementos */
+  /* display: flex; Utiliza flexbox para alinear verticalmente */
+  /* flex-wrap: wrap; Permite que los elementos se envuelvan en filas */
+  /* justify-content: center; Alinea los elementos en el centro horizontal */
+  /* flex-direction: column; Apila los elementos verticalmente */
+  /* align-items: center; Alinea los elementos en el centro horizontal */
+  /* text-align: center; Alinea el texto en el centro */
+/* } */
+
+/* .service img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+} */
+
+/* .service h3 {
+  font-size: 1.7em;
+} */
+
+/* .service p {
+  font-size: 1.1em;
+} */
+
+/* .service img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  max-height: 200px;
+  border-radius: 20%;
+  margin-bottom: 20px;
+} */
+
+/* .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} 
 
 .card-img-top {
   border-radius: 10px;
-}
+} 
 
 .card-title {
   color: #1A4D2E;
@@ -86,91 +178,9 @@ a:hover {
 
 .card-text {
   color: #6c757d;
-}
+} */
 
-.jumbotron {
-  background-image: url("/img/fondo-atardecer.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 100px 0;
-  position: relative;
-}
-
-.jumbotron:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.jumbotron .container {
-  position: relative;
-}
-
-.jumbotron .container h1 {
-  font-size: 4em;
-  margin-bottom: 30px;
-  font-weight: bold;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
-  color: #F7F6BB;
-  text-decoration: underline;
-}
-
-.jumbotron .container p {
-  font-size: 1.8em;
-  opacity: 0.9;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-h2 {
-  text-align: center;
-  padding: 20px;
-  text-decoration: underline;
-  text-decoration-color: #FF9F29;
-}
-
-.service {
-  flex: 0 0 calc(33.33% - 20px); /* Establece el ancho deseado para cada elemento */
-  margin: 10px; /* Agrega un margen entre los elementos */
-  display: flex; /* Utiliza flexbox para alinear verticalmente */
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
-  justify-content: center; /* Alinea los elementos en el centro horizontal */
-  flex-direction: column; /* Apila los elementos verticalmente */
-  align-items: center; /* Alinea los elementos en el centro horizontal */
-  text-align: center; /* Alinea el texto en el centro */
-}
-
-
-.service img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.service h3 {
-  font-size: 1.7em;
-}
-
-.service p {
-  font-size: 1.1em;
-}
-
-.service img {
-  width: 100%;
-  height: auto;
-  max-width: 250px;
-  max-height: 200px;
-  border-radius: 20%;
-  margin-bottom: 20px;
-}
-
-.carousel-item img {
+/* .carousel-item img {
   height: auto;
   max-width: 100%;
 }
@@ -184,10 +194,10 @@ h2 {
   padding: 20px;
   color: #fff;
   border-radius: 10px;
-}
+} */
 
 
-.btn-primary {
+/* .btn-primary {
   background-color: #1A4D2E;
   border-color: #1A4D2E;
 }
@@ -202,9 +212,9 @@ h2 {
 .form-control:focus {
   border-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
+} */
 
-footer {
+/* footer {
   background-color: #FF9F29;
   color: #fff;
   padding: 20px 0;
@@ -213,6 +223,6 @@ footer {
 footer .footer-icons i {
   color: #fff;
   margin-right: 10px;
-}
+} */
 
 /*# sourceMappingURL=styles.css.map */

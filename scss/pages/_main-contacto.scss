@@ -1,0 +1,19 @@
+/*Main Contacto*/
+.btn-primary {
+    background-color: #1A4D2E;
+    border-color: #1A4D2E;
+
+    &:hover {
+        background-color: #1A4D2E;
+        border-color: #1A4D2E;
+    }
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+
+    &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+}

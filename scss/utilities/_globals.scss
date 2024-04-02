@@ -1,0 +1,39 @@
+/*Estilos Globales*/
+$body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-font: "Roboto", sans-serif;
+$primary-text-color: #343a40;
+$secondary-text-color: #1A4D2E;
+$background-color: #FAF3E3;
+$a-color: #FF9F29;
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-family: $body-font;
+    margin-top: 160px;
+    line-height: 1.6;
+    color: $primary-text-color;
+    background-color: $background-color;
+}
+
+h1, h2, h3, h4, h6 {
+    font-family: $header-font;
+    font-weight: bold;
+    color: $secondary-text-color;
+}
+
+h1 h5, h2 h5, h3 h5, h4 h5, h6 h5 {
+    font-family: $header-font;
+    font-weight: bold;
+    color: white;
+}
+
+a {
+    color: $a-color;
+    
+    &:hover {
+        color: $a-color;
+    }
+}

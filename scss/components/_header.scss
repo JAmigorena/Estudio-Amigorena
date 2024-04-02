@@ -1,0 +1,63 @@
+/* header */
+header {
+    background-color: #FF9F29;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 150px; /* Ajusta la altura del encabezado según tu preferencia */
+
+    img.logo {
+        height: 120px; /* Ajusta la altura de la imagen del encabezado */
+        border: 3px solid;
+        border-radius: 50%;
+        margin: 5px 20px; /* Ajusta los márgenes según sea necesario */
+        background: linear-gradient(to bottom, #FF9F29, #FF4C29);
+        opacity: 0; /* Establece la opacidad inicial en 0 */
+        transition: opacity 0.5s ease; /* Añade una transición para la opacidad */
+    }
+
+    /* Opacidad al pasar el mouse sobre el encabezado */
+    &:hover img.logo {
+        filter: brightness(80%); /* Reduce el brillo para resaltar el cambio */
+    }
+
+    /* Hacer que el logo se desvanezca gradualmente al aparecer */
+    &.fade-in img.logo {
+        opacity: 1; /* Ajusta la opacidad a 1 para mostrar el logo gradualmente */
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 20px; /* Ajusta el margen derecho del contenedor de navegación */
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0;
+    }
+    .navbar-nav .nav-item .nav-link {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        &:hover {
+            color: white;
+            background-color: #FF7F00; /* Cambia el color de fondo al pasar el mouse sobre los enlaces */
+        }
+    }
+    .navbar-toggler {
+        border-color: #1A4D2E;
+    }
+    .navbar-toggler .navbar-toggler-icon {
+        background-color: gray;
+        border-radius: 5px;
+    }
+}
+
+/* Ajusta el margen superior del contenido principal para que no esté cubierto por el encabezado */
+main {
+    margin-top: 80px; /* Ajusta según la altura del encabezado */
+}
