@@ -37,3 +37,70 @@ a {
         color: $a-color;
     }
 }
+
+
+/* Estilos para el icono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 320px; /* Ajusta la posición vertical según sea necesario */
+    right: 20px; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+}
+
+.whatsapp-icon img {
+    width: 50px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: auto;
+}
+
+/* Estilos para ocultar el icono al hacer scroll hacia arriba */
+body {
+    padding-bottom: 70px; /* Ajusta según la altura del icono */
+}
+
+.whatsapp-icon.hidden {
+    display: none;
+}
+
+.breadcrumb-nav {
+    margin-top: 20px;
+
+    .breadcrumb {
+        background-color: #FAF3E3;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 16px;
+        list-style: none;
+        overflow: hidden;
+
+        .breadcrumb-item {
+            display: inline-block;
+            margin-right: 10px;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            &.active {
+                color: #333;
+                font-weight: bold;
+            }
+
+            a {
+                color: #007bff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #0056b3;
+                }
+
+                i {
+                    margin-right: 3px; // Espacio entre el icono y el texto
+                }
+            }
+        }
+    }
+}
+
+
+

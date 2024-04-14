@@ -38,40 +38,85 @@ a:hover {
   color: #FF9F29;
 }
 
-/* header */
+/* Estilos para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 320px; /* Ajusta la posición vertical según sea necesario */
+  right: 20px; /* Ajusta la posición horizontal según sea necesario */
+  z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+}
+
+.whatsapp-icon img {
+  width: 50px; /* Ajusta el tamaño del ícono según sea necesario */
+  height: auto;
+}
+
+/* Estilos para ocultar el icono al hacer scroll hacia arriba */
+body {
+  padding-bottom: 70px; /* Ajusta según la altura del icono */
+}
+
+.whatsapp-icon.hidden {
+  display: none;
+}
+
+.breadcrumb-nav {
+  margin-top: 20px;
+}
+.breadcrumb-nav .breadcrumb {
+  background-color: #FAF3E3;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  list-style: none;
+  overflow: hidden;
+}
+.breadcrumb-nav .breadcrumb .breadcrumb-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.breadcrumb-nav .breadcrumb .breadcrumb-item:not(:last-child) {
+  margin-right: 5px;
+}
+.breadcrumb-nav .breadcrumb .breadcrumb-item.active {
+  color: #333;
+  font-weight: bold;
+}
+.breadcrumb-nav .breadcrumb .breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.breadcrumb-nav .breadcrumb .breadcrumb-item a:hover {
+  color: #0056b3;
+}
+.breadcrumb-nav .breadcrumb .breadcrumb-item a i {
+  margin-right: 3px;
+}
+
+header img.logo {
+  height: 120px;
+  border: 3px solid;
+  border-radius: 50%;
+  margin: 5px 20px;
+  background: linear-gradient(to bottom, #FF9F29, #FF4C29);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+header img.logo:hover {
+  filter: brightness(80%);
+}
+
 header {
   background-color: #FF9F29;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 150px; /* Ajusta la altura del encabezado según tu preferencia */
-  /* Opacidad al pasar el mouse sobre el encabezado */
-  /* Hacer que el logo se desvanezca gradualmente al aparecer */
-}
-header img.logo {
-  height: 120px; /* Ajusta la altura de la imagen del encabezado */
-  border: 3px solid;
-  border-radius: 50%;
-  margin: 5px 20px; /* Ajusta los márgenes según sea necesario */
-  background: linear-gradient(to bottom, #FF9F29, #FF4C29);
-  opacity: 0; /* Establece la opacidad inicial en 0 */
-  transition: opacity 0.5s ease; /* Añade una transición para la opacidad */
-}
-header:hover img.logo {
-  filter: brightness(80%); /* Reduce el brillo para resaltar el cambio */
+  height: 150px;
 }
 header.fade-in img.logo {
-  opacity: 1; /* Ajusta la opacidad a 1 para mostrar el logo gradualmente */
-}
-header .navbar-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 20px; /* Ajusta el margen derecho del contenedor de navegación */
-}
-header .navbar-nav .nav-item {
-  margin-right: 0;
+  opacity: 1;
 }
 header .navbar-nav .nav-item .nav-link {
   color: white;
@@ -83,7 +128,37 @@ header .navbar-nav .nav-item .nav-link {
 }
 header .navbar-nav .nav-item .nav-link:hover {
   color: white;
-  background-color: #FF7F00; /* Cambia el color de fondo al pasar el mouse sobre los enlaces */
+  background-color: #FF7F00;
+}
+header .navbar-collapse {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  top: 150px;
+  left: 0;
+  z-index: 999;
+  transition: top 0.3s ease;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+}
+@media (min-width: 768px) {
+  header .navbar-collapse {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    top: auto;
+    left: auto;
+    z-index: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+header .navbar-collapse.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0%);
 }
 header .navbar-toggler {
   border-color: #1A4D2E;
@@ -93,19 +168,18 @@ header .navbar-toggler .navbar-toggler-icon {
   border-radius: 5px;
 }
 
-/* Ajusta el margen superior del contenido principal para que no esté cubierto por el encabezado */
 main {
-  margin-top: 80px; /* Ajusta según la altura del encabezado */
+  margin-top: 150px;
 }
 
 /*Main Index*/
 .jumbotron {
-  background-image: url("./../img/fondo-atardecer.jpg");
+  background-image: url("./../img/img-bsas.jpg");
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 100px 0;
+  padding: 250px 0;
   position: relative;
 }
 .jumbotron:before {
@@ -192,6 +266,7 @@ h2 {
 .carousel-item img {
   height: auto;
   max-width: 100%;
+  border-radius: 10px;
 }
 
 .carousel-caption {
@@ -223,16 +298,47 @@ h2 {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/*Footer*/
+/* Footer */
 footer {
   background-color: #FF9F29;
   color: #fff;
   padding: 20px 0;
   margin-top: 20px;
+  font-size: 16px;
 }
-footer .footer-icons i {
-  color: #fff;
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .footer-info {
+  width: 45%;
+  text-align: right;
+}
+footer .footer-info .footer-info-item {
+  margin-bottom: 10px;
+}
+footer .footer-icons {
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+}
+footer .footer-icons .footer-icon {
   margin-right: 10px;
+}
+footer .footer-icons .footer-icon a {
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-icons .footer-icon i {
+  font-size: 24px;
+}
+footer .footer-icons .footer-icon:last-child {
+  margin-right: 0;
+}
+footer i {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,53 @@
-/*Footer*/
+/* Footer */
 footer {
     background-color: #FF9F29;
     color: #fff;
     padding: 20px 0;
     margin-top: 20px;
+    font-size: 16px; // Tamaño de fuente predeterminado
 
-    .footer-icons i {
-        color: #fff;
-        margin-right: 10px;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-info {
+        width: 45%; // Ancho del bloque de información
+        text-align: right;
+
+        .footer-info-item {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer-icons {
+        width: 45%; // Ancho del bloque de íconos
+        display: flex;
+        justify-content: flex-start;
+
+        .footer-icon {
+            margin-right: 10px;
+
+            a {
+                color: #fff; // Color de los enlaces
+                text-decoration: none; // Sin subrayado
+            }
+
+            i {
+                font-size: 24px; // Aumenta el tamaño de los íconos de las redes sociales
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    i {
+        margin-right: 5px; // Espacio entre el icono y el texto
     }
 }
+
+

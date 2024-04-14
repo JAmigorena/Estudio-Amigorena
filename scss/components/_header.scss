@@ -1,53 +1,86 @@
-/* header */
+// Mixins
+@mixin button-styles {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: white;
+        background-color: #FF7F00;
+    }
+}
+
+// Extend
+%logo-styles {
+    height: 120px;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 5px 20px;
+    background: linear-gradient(to bottom, #FF9F29, #FF4C29);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+}
+
+// Aquí comienza el uso del mixin button-styles
 header {
     background-color: #FF9F29;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 150px; /* Ajusta la altura del encabezado según tu preferencia */
+    height: 150px;
 
     img.logo {
-        height: 120px; /* Ajusta la altura de la imagen del encabezado */
-        border: 3px solid;
-        border-radius: 50%;
-        margin: 5px 20px; /* Ajusta los márgenes según sea necesario */
-        background: linear-gradient(to bottom, #FF9F29, #FF4C29);
-        opacity: 0; /* Establece la opacidad inicial en 0 */
-        transition: opacity 0.5s ease; /* Añade una transición para la opacidad */
+        @extend %logo-styles;
     }
 
-    /* Opacidad al pasar el mouse sobre el encabezado */
-    &:hover img.logo {
-        filter: brightness(80%); /* Reduce el brillo para resaltar el cambio */
-    }
-
-    /* Hacer que el logo se desvanezca gradualmente al aparecer */
     &.fade-in img.logo {
-        opacity: 1; /* Ajusta la opacidad a 1 para mostrar el logo gradualmente */
+        opacity: 1;
     }
 
-    .navbar-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 20px; /* Ajusta el margen derecho del contenedor de navegación */
-    }
-    .navbar-nav .nav-item {
-        margin-right: 0;
-    }
     .navbar-nav .nav-item .nav-link {
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 12px 20px;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        &:hover {
-            color: white;
-            background-color: #FF7F00; /* Cambia el color de fondo al pasar el mouse sobre los enlaces */
+        @include button-styles; // Uso del mixin aquí
+    }
+
+    // Ajuste para el menú desplegable en dispositivos móviles
+    .navbar-collapse {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        top: 150px;
+        left: 0;
+        z-index: 999;
+        transition: top 0.3s ease;
+        transform: translateY(-100%);
+        visibility: hidden;
+        opacity: 0;
+
+        @media (min-width: 768px) {
+            position: static;
+            background-color: transparent;
+            width: auto;
+            top: auto;
+            left: auto;
+            z-index: auto;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0%);
         }
     }
+
+    .navbar-collapse.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
     .navbar-toggler {
         border-color: #1A4D2E;
     }
@@ -57,7 +90,9 @@ header {
     }
 }
 
-/* Ajusta el margen superior del contenido principal para que no esté cubierto por el encabezado */
+// Ajusta el margen superior del contenido principal para que no esté cubierto por el encabezado
 main {
-    margin-top: 80px; /* Ajusta según la altura del encabezado */
+    margin-top: 150px;
 }
+
+

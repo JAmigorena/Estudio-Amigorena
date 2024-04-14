@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Nosotros</title>
+    <meta name="description" content="Somos un estudio jurídico comprometido con la excelencia en el asesoramiento legal. Nuestro equipo de abogados especializados ofrece soluciones eficaces en una amplia gama de áreas legales, incluyendo derecho civil, penal, laboral, tributario y comercial. Contacta con nosotros para recibir asesoramiento legal confiable y profesional.">
+    <meta name="keywords" content="estudio jurídico, abogados, servicios legales, derecho, asesoramiento legal">
+    <title>Sobre Nosotros - Conoce Nuestra Experiencia y Compromiso</title>
     <!-- Enlaza los archivos CSS de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -46,6 +48,11 @@
     </header>
     
     <main>
+        <div class="whatsapp-icon">
+            <a href="https://api.whatsapp.com/send?phone=1162453936" target="_blank">
+                <img src="./../img/logo.whatsapp.png" alt="Icono de WhatsApp">
+            </a>
+        </div>
     <!-- Nosotros -->
         <div class="container mt-5">
             <h1 class="text-center mb-5">Sobre Nosotros</h1>
@@ -70,23 +77,40 @@
                 </div>
             </div>
         </div>
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="./nosotros.html">Nosotros</a></li>
+                <li class="breadcrumb-item"><a href="./equipo.html">Equipo</a></li>
+                <li class="breadcrumb-item"><a href="./servicios.html">Servicios</a></li>
+                <li class="breadcrumb-item"><a href="./contacto.html">Contacto</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+            </ol>
+        </nav>
     </main>
 
-    <footer style= "background-color: FF9F29">
+    <footer style="background-color: #FF9F29;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 text-left footer-icons">
-                    <a href="#"><i class="fab fa-instagram btn btn-primary"></i></a>
-                    <a href="#"><i class="fab fa-facebook btn btn-primary"></i></a>
+                <div class="col-lg-6 footer-info">
+                    <div class="footer-info-item">
+                        <i class="fas fa-phone"></i> 1162453936
+                    </div>
+                    <div class="footer-info-item">
+                        <i class="fas fa-map-marker-alt"></i> Libertad 293, 2do piso, CABA, Argentina
+                    </div>
                 </div>
-                <div class="col-lg-6 text-right">
-                    <i class="fas fa-map-marker-alt"></i> Libertad 293, 2do piso, CABA, Argentina
-                    <br>
-                    <i class="fas fa-phone"></i> 1162453936
+                <div class="col-lg-6 footer-icons">
+                    <div class="footer-icon">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-icon">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>  
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
